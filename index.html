@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue slider</title>
+    <!-- link font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- link boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- link css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- libreria vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<!--  
+    Descrizione: Rifare l’esercizio dello slider come fatto assieme in classe.
+    Bonus:
+    Applicare l’autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente.
+    Se clicco sul singolo dot, cambia immagine
+    Lunedì pomeriggio continuate a esercitarvi sia con vue.js sia lato html/css, 
+    continuate il template e proponeteci anche qualcosa di carino a livello grafico 
+-->
+<body>
+
+    <!-- collegamento con vue.js -->
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 arrow"  @click="prev">
+                    <i class="fas fa-chevron-left"></i>
+
+                </div>
+                <div class="col-8">
+                    <h1>I miei posti preferiti a CUBA</h1>
+                    <img :src="img[indexImg]" alt="picture-cuba">
+                    <div class="slider-dots">
+                        <i 
+                        v-for="(img,index) in img" 
+                        :class="CurrentDot(index)" 
+                        class="fas fa-circle"
+                        @click="selectPicDot(index)"
+                        >
+
+                        </i>
+                    </div>
+                </div>
+                <div class="col-2 arrow" @click="next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- link javascript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+.col-8 img{
+    width: 100%;
+}
+.arrow{
+    font-size: 25px;
+}
+.slider-dots{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-top: -100px;
+    color: white;
+}
+.current{
+    color: turquoise;
+}
