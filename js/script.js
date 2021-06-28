@@ -5,12 +5,12 @@ new Vue(
         el: '#app',
         data: {
             img:[ //array di img
-                "./img/habana.jpg",
-                "./img/cayoJutias.jpg",
-                "./img/trinidad.jpg",
-                "./img/varadero.jpg",
-                "./img/santiagoDeCuba.jpg",
-                "./img/cayoLevisa.jpg",
+                {path:"./img/habana.jpg",name:"Habana"},
+                {path:"./img/cayoJutias.jpg",name:"Cayo Jutias"},
+                {path:"./img/trinidad.jpg",name:"Trinidad"},
+                {path:"./img/varadero.jpg",name:"Varadero"},
+                {path:"./img/santiagoDeCuba.jpg",name:"Santiago De Cuba"},
+                {path:"./img/cayoLevisa.jpg",name:"Cayo Levisa"},
             ],
             // l'indice di ogni immagine
             indexImg:0,       

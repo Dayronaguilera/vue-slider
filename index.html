@@ -23,27 +23,25 @@
     Lunedì pomeriggio continuate a esercitarvi sia con vue.js sia lato html/css, 
     continuate il template e proponeteci anche qualcosa di carino a livello grafico 
 -->
-<body>
+<body >
 
     <!-- collegamento con vue.js -->
     <div id="app">
-        <div class="container">
+        <div class="container" id="bg-cuba" >
             <div class="row">
-                <div class="col-2 arrow"  @click="prev">
+                <div class="col-2 arrow" @click="prev">
                     <i class="fas fa-chevron-left"></i>
 
                 </div>
                 <div class="col-8">
-                    <h1>I miei posti preferiti a CUBA</h1>
-                    <img :src="img[indexImg]" alt="picture-cuba">
+                    <h1>I luoghi preferiti di CUBA: "<span>{{img[indexImg].name}}</span>"</h1>
+                    <img :src="img[indexImg].path" alt="picture-cuba">
                     <div class="slider-dots">
                         <i 
                         v-for="(img,index) in img" 
                         :class="CurrentDot(index)" 
-                        class="fas fa-circle"
-                        @click="selectPicDot(index)"
-                        >
-
+                        class="fas fa-circle p-2"
+                        @click="selectPicDot(index)">
                         </i>
                     </div>
                 </div>
@@ -53,6 +51,7 @@
             </div>
         </div>
     </div>
+    
     
     <!-- link javascript -->
     <script src="js/script.js"></script>
